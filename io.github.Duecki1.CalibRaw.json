@@ -14,9 +14,7 @@
         "--socket=wayland",
         "--socket=fallback-x11",
         "--device=dri",
-        "--filesystem=xdg-pictures",
-        "--filesystem=xdg-run/discord-ipc-0",
-        "--filesystem=xdg-run/app/com.discordapp.Discord:create"
+        "--filesystem=xdg-pictures"
     ],
     "cleanup": [
         "/include",
@@ -34,9 +32,8 @@
             "CALIBRAW_REQUIRE_LENSFUN": "1",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME": "/app/lib/libonnxruntime.so",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME_VERSION": "1.30.0",
-            "CALIBRAW_SOURCE_REVISION": "9f648e41e47d974ee8a99fc325fa1f6d676bfa09",
-            "CALIBRAW_DISCORD_APPLICATION_ID": "1542956929222058124",
-            "SOURCE_DATE_EPOCH": "1791333712"
+            "CALIBRAW_SOURCE_REVISION": "7dee295dc5d1aa7b8708c61917dac4872a4ab9ed",
+            "SOURCE_DATE_EPOCH": "1792111470"
         }
     },
     "modules": [
@@ -55,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/LibRaw/LibRaw/archive/b860248a89d9082b8e0a1e202e516f46af9adb29.tar.gz",
-                    "sha256": "f5da1e522ea195b54b30f3ff105ef2193daa04ea165dea825b4d6fe9d886395b"
+                    "url": "https://github.com/LibRaw/LibRaw/archive/830ac963b40223c6a25add5be65036fa8d56e2d6.tar.gz",
+                    "sha256": "dd77deb5e7e290d2216ad8688ec4ac7dccdeea3def0927076a63a61d326e212a"
                 },
                 {
                     "type": "script",
@@ -101,7 +98,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "python3 packaging/flatpak/generate-licenses.py",
-                "cargo build --offline --locked --release -p calibraw-ui --bin calibraw -p calibraw-cli --bin calibraw-develop-export",
+                "cargo build --offline --locked --release --features calibraw-ui/flathub -p calibraw-ui --bin calibraw -p calibraw-cli --bin calibraw-develop-export",
                 "install -Dm755 \"${CARGO_TARGET_DIR:-target}/release/calibraw\" /app/bin/calibraw",
                 "install -Dm755 \"${CARGO_TARGET_DIR:-target}/release/calibraw-develop-export\" /app/bin/calibraw-develop-export",
                 "install -Dm644 packaging/linux/io.github.Duecki1.CalibRaw.desktop /app/share/applications/io.github.Duecki1.CalibRaw.desktop",
@@ -117,7 +114,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Duecki1/CalibRaw.git",
-                    "commit": "9f648e41e47d974ee8a99fc325fa1f6d676bfa09"
+                    "commit": "7dee295dc5d1aa7b8708c61917dac4872a4ab9ed"
                 },
                 "cargo-sources.json"
             ]

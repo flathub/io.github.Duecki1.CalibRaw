@@ -32,8 +32,8 @@
             "CALIBRAW_REQUIRE_LENSFUN": "1",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME": "/app/lib/libonnxruntime.so",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME_VERSION": "1.30.0",
-            "CALIBRAW_SOURCE_REVISION": "7dee295dc5d1aa7b8708c61917dac4872a4ab9ed",
-            "SOURCE_DATE_EPOCH": "1792111470"
+            "CALIBRAW_SOURCE_REVISION": "fca3c00ff34b988af2552f1efe8a796c96602eb8",
+            "SOURCE_DATE_EPOCH": "1792369407"
         }
     },
     "modules": [
@@ -114,7 +114,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Duecki1/CalibRaw.git",
-                    "commit": "7dee295dc5d1aa7b8708c61917dac4872a4ab9ed"
+                    "commit": "fca3c00ff34b988af2552f1efe8a796c96602eb8"
                 },
                 "cargo-sources.json"
             ]

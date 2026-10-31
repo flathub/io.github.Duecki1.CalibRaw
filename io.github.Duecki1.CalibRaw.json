@@ -32,8 +32,8 @@
             "CALIBRAW_REQUIRE_LENSFUN": "1",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME": "/app/lib/libonnxruntime.so",
             "CALIBRAW_BUNDLED_ONNX_RUNTIME_VERSION": "1.30.0",
-            "CALIBRAW_SOURCE_REVISION": "fca3c00ff34b988af2552f1efe8a796c96602eb8",
-            "SOURCE_DATE_EPOCH": "1792369407"
+            "CALIBRAW_SOURCE_REVISION": "0f3b17de1fbf1c3f8620798014ebfcf0374e7bbe",
+            "SOURCE_DATE_EPOCH": "1793400259"
         }
     },
     "modules": [
@@ -70,7 +70,6 @@
             "builddir": true,
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
                 "-DCMAKE_INSTALL_LIBDIR=lib",
                 "-DBUILD_STATIC=OFF",
                 "-DBUILD_TESTS=OFF",
@@ -87,8 +86,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz",
-                    "sha256": "dafb39c08ef24a0e2abd00d05d7341b1bf1f0c38bfcd5a4c69cf5f0ecb6db112"
+                    "url": "https://github.com/lensfun/lensfun/archive/bc5615d6278cb5fb75dd53e74015367453d5591d.tar.gz",
+                    "sha256": "b56bff238bd9b8f6e517785de9361a11608f0d2afbfa9e21ce4a33d69d5c2046"
                 }
             ]
         },
@@ -114,7 +113,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Duecki1/CalibRaw.git",
-                    "commit": "fca3c00ff34b988af2552f1efe8a796c96602eb8"
+                    "commit": "0f3b17de1fbf1c3f8620798014ebfcf0374e7bbe"
                 },
                 "cargo-sources.json"
             ]
